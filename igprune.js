@@ -5,9 +5,10 @@ let userClass = "x9f619 xjbqb8w x78zum5 x168nmei x13lgxp2 x5pf9jr xo71vjh x1uhb9
 let userNameClass = "x9f619 xjbqb8w x1rg5ohu x168nmei x13lgxp2 x5pf9jr xo71vjh x1n2onr6 x1plvlek xryxfnj x1c4vz4f x2lah0s x1q0g3np xqjyukv x6s0dn4 x1oa3qoh x1nhvcw1";
 let removeConfirmationClass = "_a9-- _a9-_";
 
-init();
 
 const delay = (ms) => new Promise(res => setTimeout(res, ms));
+
+init();
 
 async function init() {
 	for (let i = 0; i < followers.length; i++) {
