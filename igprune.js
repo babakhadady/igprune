@@ -13,7 +13,7 @@ init();
 async function init() {
 	for (let i = 0; i < followers.length; i++) {
 		checkFollower(followers[i]);
-		await delay(5000);
+		await delay(Math.random(10)*10000);
 	}
 }
 
