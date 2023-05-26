@@ -12,20 +12,24 @@ init();
 
 async function init() {
 	for (let i = 0; i < followers.length; i++) {
-		checkFollower(followers[i]);
-		await delay((1 + Math.random(10))*30000);
+		console.log("Checking new follower");
+		let notFollowing = await checkFollower(followers[i]);
+		// if (notFollowing) {
+			// await delay((1 + Math.random(10))*3000);
+		// }
 	}
 }
 
 
 
-function checkFollower(follower) {
+async function checkFollower(follower) {
 	let elements = getElements(follower);
 	if (elements["user"]) {
 		let ret = checkNotFollowing(elements["user"]);
 		if (ret[1]) {
-			unfollowUser(elements["remove"], ret[0]);
+			await unfollowUser(elements["remove"], ret[0]);
 		}
+		return ret[1];
 	}
 }
 
@@ -43,6 +47,7 @@ function getElements(follower) {
 				stack.push(child);
 			}
 		}
+		if ((elements["remove"] !== undefined) && (elements["user"] !== undefined)) break;
 	}
 	return elements;
 }
@@ -58,15 +63,20 @@ function checkNotFollowing(user) {
 			stack.push(child);
 		}
 		if (curr.className === userNameClass) userName = curr.textContent;
+		if(notFollowing === true && userName !== "") break;
 	}
 	return [userName, notFollowing];
 }
 
 async function unfollowUser(removeButton, userName) {
-	removeButton.click();
-	delay(100).then(() => {
+	let time = (1 + Math.random(3)) * 30000;
+	console.log("Waiting " + time + " ms");
+	return delay(time).then(() => {
+		removeButton.click();
+	}).then(() => {
 		document.getElementsByClassName(removeConfirmationClass)[0].click();
 		console.log("Removed " + userName);
+		return true;
 	});
 }
 
