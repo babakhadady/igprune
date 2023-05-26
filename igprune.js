@@ -12,7 +12,7 @@ const delay = (ms) => new Promise(res => setTimeout(res, ms));
 async function init() {
 	for (let i = 0; i < followers.length; i++) {
 		checkFollower(followers[i]);
-		await delay(10000);
+		await delay(5000);
 	}
 }
 
