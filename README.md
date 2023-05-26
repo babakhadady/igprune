@@ -15,4 +15,4 @@ Ctrl + Shift + J on Windows
 
 ## Disclaimer
 
-This script is not allowed by Instagram, and can possible result in you being temporarily blocked from making requests. Could also lead to an indefinite ban.
+This script is not allowed by Instagram, and can possible result in you being temporarily blocked from making requests. Could also lead to an indefinite ban. (it got me banned. if you would like to use it I would increase the timeout to be a few minutes)
