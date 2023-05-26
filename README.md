@@ -11,7 +11,7 @@ Ctrl + Shift + J on Windows
 ```
 3.   Click on the display button beside `Elements`, change `Dimensions` to `IPhone 12 Pro`
 4.   Click `Followers`
-5.   Open the `Console`, and paste in the script found `igprune.js`
+5.   Open the `Console`, and paste in the script found in `igprune.js`
 
 ## Disclaimer
 
