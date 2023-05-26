@@ -7,6 +7,8 @@ let removeConfirmationClass = "_a9-- _a9-_";
 
 init();
 
+const delay = (ms) => new Promise(res => setTimeout(res, ms));
+
 async function init() {
 	for (let i = 0; i < followers.length; i++) {
 		checkFollower(followers[i]);
@@ -15,7 +17,6 @@ async function init() {
 }
 
 
-const delay = (ms) => new Promise(res => setTimeout(res, ms));
 
 function checkFollower(follower) {
 	let elements = getElements(follower);
