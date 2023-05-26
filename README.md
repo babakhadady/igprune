@@ -9,6 +9,7 @@ Script to prune instagram followers (that you don't follow back)
 Command + Option + J on Mac
 Ctrl + Shift + J on Windows
 ```
+3.   Click on the display button beside `Elements`, change `Dimensions` to `IPhone 12 Pro`
 4.   Click `Followers`
 5.   Open the `Console`, and paste in the script found in `igprune.js`
 
