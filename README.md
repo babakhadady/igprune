@@ -3,7 +3,7 @@
 Script to prune instagram followers (that you don't follow back)
 ## Initialization
 
-1. navigate to https://www.instagram.com/USERNAME
+1. Navigate to https://www.instagram.com/USERNAME
 2. Open Dev Tools 
 ```
 Command + Option + J on Max
