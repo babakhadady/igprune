@@ -14,9 +14,6 @@ async function init() {
 	for (let i = 0; i < followers.length; i++) {
 		console.log("Checking new follower");
 		let notFollowing = await checkFollower(followers[i]);
-		// if (notFollowing) {
-			// await delay((1 + Math.random(10))*3000);
-		// }
 	}
 }
 
